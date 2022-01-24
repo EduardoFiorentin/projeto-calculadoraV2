@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+        <div class="calculadora">
+            <div>
+                <input type="text" name="" id="display" class="display">
+            </div>
+            <div class="teclado">
+                <div class="coluna">
+                    <input type="button" value="%" class="botao" onclick="operacao('%')">
+                    <input type="button" value="7" class="botao" onclick="numero(7)">
+                    <input type="button" value="4" class="botao" onclick="numero(4)">
+                    <input type="button" value="1" class="botao" onclick="numero(1)">
+                    <input type="button" value="0" class="botao" onclick="numero(0)">
+                </div>
+                <div class="coluna">
+                    <input type="button" value="-" class="botao" onclick="operacao('-')">
+                    <input type="button" value="8" class="botao" onclick="numero(8)">
+                    <input type="button" value="5" class="botao" onclick="numero(5)">
+                    <input type="button" value="2" class="botao" onclick="numero(2)">
+                    <input type="button" value="." class="botao" onclick="numero('.')">
+                </div>
+                <div class="coluna">
+                    <input type="button" value="x" class="botao" onclick="operacao('x')">
+                    <input type="button" value="9" class="botao" onclick="numero(9)">
+                    <input type="button" value="6" class="botao" onclick="numero(6)">
+                    <input type="button" value="3" class="botao" onclick="numero(3)">
+                    <input type="button" value="c" class="botao" onclick="limpar()">
+                </div>
+                <div class="coluna com-igual">
+                    <input type="button" value="+" class="botao" onclick="operacao('+')">
+                    <input type="button" value="M+" class="botao" onclick="memory('+')"> 
+                    <input type="button" value="M-" class="botao" onclick="memory('-')">
+                    <input type="button" value="M" class="botao" onclick="memory('d')" ondblclick="memory('c')">
+                    <input type="button" value="=" class="botao" onclick="operacao('=')">
+                </div>
+            </div>
+        </div>
+        <br>
+        OBS: M: single click: display memory value | double click: clear memory
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
